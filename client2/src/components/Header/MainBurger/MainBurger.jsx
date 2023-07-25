@@ -5,7 +5,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
 
-
 const MainBurger = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -34,7 +33,9 @@ const MainBurger = () => {
         open={Boolean(anchorEl)}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleMenuClose} sx={{ width: "400px" }}><NavLink to="/phones" style={{ textDecoration: "none", color: "black" }} >Мобільні телефони</NavLink></MenuItem>
+        <MenuItem component={NavLink} to="/phones"  onClick={handleMenuClose} sx={{ width: "400px", textDecoration: "none", color: "black" }}>
+          Мобільні телефони
+        </MenuItem>
       </Menu>
     </>
   );
