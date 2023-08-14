@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
+  fieldToChange: '',
+  itemToChange: '',
 };
 
 const productsSlice = createSlice({
@@ -11,9 +13,15 @@ const productsSlice = createSlice({
     addProducts: (state, action) => {
       state.products = action.payload;
     },
+    addFieldToChange: (state, action) => {
+      state.fieldToChange = action.payload;
+    },
+    addItemToChange: (state, action) => {
+      state.itemToChange = action.payload;
+    },
   },
 });
 
-export const { addProducts } = productsSlice.actions;
+export const { addProducts, addFieldToChange, addItemToChange } = productsSlice.actions;
 
 export default productsSlice.reducer;

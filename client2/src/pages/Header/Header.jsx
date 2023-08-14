@@ -11,7 +11,6 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { useState } from "react";
-import SearchField from "../../components/Header/SearchField/SearchField";
 import MainBurger from "../../components/Header/MainBurger/MainBurger";
 import { NavLink } from "react-router-dom";
 
@@ -115,7 +114,7 @@ const Header = () => {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1}}>
       <AppBar position="static">
         <Toolbar>
           <MainBurger />
@@ -127,9 +126,9 @@ const Header = () => {
           >
             <NavLink to="/" style={{ textDecoration: "none", color: "black" }}>Інтернет магазин</NavLink>
           </Typography>
-          <SearchField />
+          {/* <SearchField /> */}
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
               aria-label="show 4 new mails"
@@ -159,7 +158,7 @@ const Header = () => {
             >
               <AccountCircle />
             </IconButton>
-          </Box>
+          </Box> */}
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
